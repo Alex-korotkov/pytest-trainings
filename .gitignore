@@ -1,0 +1,7 @@
+cards_proj/
+venv/
+.pytest_cache/
+__pycache__/
+.vscode/
+bopytest2-code.zip
+.DS_Store
