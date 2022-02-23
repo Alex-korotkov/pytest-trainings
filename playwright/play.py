@@ -26,6 +26,6 @@ def test_playwright_play():
         page = browser.new_page()
         page.goto("https://playwright.dev/")
         page.pause()
-        page.locator('some_button').click()
+        page.locator('button').click()
         page.screenshot(path="example.png")
         browser.close()
