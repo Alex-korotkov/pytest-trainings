@@ -22,10 +22,8 @@ from playwright.sync_api import sync_playwright
 
 def test_playwright_play():
     with sync_playwright() as p:
-        browser = p.chromium.launch()
+        browser = p.webkit.launch(headless=False, slow_mo=100000)
         page = browser.new_page()
-        page.goto("https://playwright.dev/")
-        page.pause()
-        page.locator('button').click()
-        page.screenshot(path="example.png")
+        page.goto("http://whatsmyuseragent.org/")
+        # page.screenshot(path="example.png")
         browser.close()
